@@ -1,1 +1,1 @@
-# Implementation of algorithms and modelling techniques discussed in *Kay Giesecke, Baeho Kim, Shilin Zhu, (2011) Monte Carlo Algorithms for Default Timing Problems. Management Science 57(12):2115-2129.* https://doi.org/10.1287/mnsc.1110.1411
+## Implementation of algorithms and modelling techniques discussed in *Kay Giesecke, Baeho Kim, Shilin Zhu, (2011) Monte Carlo Algorithms for Default Timing Problems. Management Science 57(12):2115-2129.* https://doi.org/10.1287/mnsc.1110.1411
