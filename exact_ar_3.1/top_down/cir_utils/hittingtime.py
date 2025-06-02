@@ -11,7 +11,6 @@ from utils.numerical import _hyp1f1, hyp1f1_derivative_a, validate_parameters
 EPS_ZERO = 1e-12
 EPS_SMALL = 1e-8
 
-# Get logger
 logger = logging.getLogger("monte_carlo_sim")
 
 def compute_coefficients(y: float, H: float, model_params: ModelParams, n_roots: int = 15) -> Tuple[List[float], List[float]]:
@@ -136,8 +135,6 @@ def compute_survival_probability_p1(y: float, H: float, tau: float, model_params
         
         p1 = sum(beta * np.exp(-eta * tau) for eta, beta in zip(eta_n, beta_n) 
                 if np.isfinite(beta) and np.isfinite(eta))
-        
-        # Stability bounds
         p1 = np.clip(p1, EPS_ZERO, 1 - EPS_ZERO)
         
         logger.debug(f"Survival probability: {p1:.6f}")
@@ -148,7 +145,7 @@ def compute_survival_probability_p1(y: float, H: float, tau: float, model_params
         return 0.5
 
 def sample_hitting_time_from_v(nu_t: float, H: float, tau: float, model_params: ModelParams) -> float:
-    """Sample hitting time with robust computation"""
+    """Sample hitting time from v, as outlined in section 3.1 of the paper"""
     try:
         eta_n, beta_n = compute_coefficients(nu_t, H, model_params)
         
@@ -156,7 +153,6 @@ def sample_hitting_time_from_v(nu_t: float, H: float, tau: float, model_params: 
             logger.warning("No coefficients for hitting time, using uniform")
             return np.random.uniform(0, tau)
         
-        # Compute total probability mass
         P = 1 - compute_survival_probability_p1(nu_t, H, tau, model_params)
         P = max(P, EPS_ZERO)
         

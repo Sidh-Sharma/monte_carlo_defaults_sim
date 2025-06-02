@@ -7,7 +7,6 @@ from config.model_params import ModelParams
 from top_down.simulation.exact_ar_step import simulate_next_default_step
 from utils.numerical import validate_parameters
 
-# Get logger
 logger = logging.getLogger("monte_carlo_sim")
 
 def sample_loss() -> float:

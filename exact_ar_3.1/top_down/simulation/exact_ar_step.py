@@ -7,11 +7,9 @@ from top_down.cir_utils.hittingtime import sample_hitting_time_from_v, compute_s
 from top_down.cir_utils.intensity_transition import sample_conditional_intensity_from_f
 from top_down.cir_utils.select_optimal_H import select_dominating_intensity_H
 
-# Constants for numerical stability
 EPS_ZERO = 1e-12
 EPS_SMALL = 1e-8
 
-# Get logger
 logger = logging.getLogger("monte_carlo_sim")
 
 def simulate_next_default_step(
@@ -42,7 +40,7 @@ def simulate_next_default_step(
     """
     try:
         # STEP 1: Initialize y := λ_{T_{n-1}}, t := T_{n-1}
-        y = max(lambda_prev, EPS_SMALL) # Ensure y is positive
+        y = max(lambda_prev, EPS_SMALL)
         t = t_prev 
         
         max_inner_iterations = 50  # Prevent infinite loops
@@ -56,7 +54,7 @@ def simulate_next_default_step(
             tau = np.random.exponential(scale=1/H)
             logger.debug(f"Sampled interarrival time τ={tau:.6f} from Exp(H) with H={H:.6f}")
             
-            # STEP 4: Compute survival probability p1 = P(ν stays below H up to τ)
+            # STEP 4: Compute survival probability p1 = P(y stays below H up to τ)
             p1 = compute_survival_probability_p1(y, H, tau, model_params)
             logger.info(f"Computed survival probability p1={p1:.6f} for y={y:.6f}, H={H:.6f}, τ={tau:.6f}")
             
@@ -84,7 +82,7 @@ def simulate_next_default_step(
                 if t > T_max:
                     return None
                 
-                # STEP 6: Sample ν_{T_n} from conditional density f(.; ν_t, H, τ)
+                # STEP 6: Sample ν_{T_n} from conditional density f(.; y, H, τ)
                 nu_Tn = sample_conditional_intensity_from_f(y, H, tau, model_params)
                 logger.debug(f"Sampled conditional intensity ν_{t}={nu_Tn:.6f} at t={t:.6f}")
                 

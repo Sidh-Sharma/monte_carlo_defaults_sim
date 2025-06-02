@@ -7,7 +7,7 @@ class ModelParams:
     kappa: float  # Mean reversion speed
     theta: float  # Long-term mean
     sigma: float  # Volatility  
-    gamma: Optional[float] = None  # Jump size multiplier (for default model)
+    gamma: Optional[float] = None  # Jump size multiplier
     
     def __post_init__(self):
         """Validate basic parameter constraints"""

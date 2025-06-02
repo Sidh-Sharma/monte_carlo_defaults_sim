@@ -6,18 +6,16 @@ from typing import Optional
 from config.model_params import ModelParams
 from utils.numerical import laplace_transform_G
 
-# Constants for numerical stability
 EPS_ZERO = 1e-12
 EPS_SMALL = 1e-8
 
-# Get logger
 logger = logging.getLogger("monte_carlo_sim")
 
 def select_dominating_intensity_H(y: float, model_params: ModelParams, 
                               t_C: float = 1.0, t_eta: float = 0.8, buffer: float = 0.01) -> float:
     """
     Find optimal threshold H for the dominating intensity. As outlined in Appendix A of the paper.
-    Eqn A2 is used to compute the optimal threshold H
+    Eqn A2 is used to compute the optimal threshold H.
     
     Parameters:
         y: float - Initial intensity
