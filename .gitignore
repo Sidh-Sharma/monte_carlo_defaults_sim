@@ -12,7 +12,6 @@ data/
 *.csv
 *.xlsx
 *.json
-
 *.txt
 *.log
 test.ipynb
