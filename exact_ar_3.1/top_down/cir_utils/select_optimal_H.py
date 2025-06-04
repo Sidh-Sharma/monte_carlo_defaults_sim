@@ -1,3 +1,4 @@
+# exact_ar_3.1/top_down/cir_utils/select_optimal_H.py
 import numpy as np
 from scipy.optimize import minimize_scalar
 import logging

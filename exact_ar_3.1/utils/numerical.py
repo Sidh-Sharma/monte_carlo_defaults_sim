@@ -1,3 +1,4 @@
+# exact_ar_3.1/utils/numerical.py
 import numpy as np
 from scipy.special import hyp1f1
 from typing import Tuple, List
