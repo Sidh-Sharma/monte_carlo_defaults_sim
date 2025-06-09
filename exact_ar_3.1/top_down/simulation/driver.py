@@ -12,7 +12,11 @@ logger = logging.getLogger("monte_carlo_sim")
 
 def sample_loss() -> float:
     """Sample loss from a uniform distribution as per the original model"""
-    return np.random.uniform(0.24, 0.96)
+    u = np.random.uniform(0, 1)
+    if u < 0.5:
+        return 0.24
+    else:
+        return 0.96
 
 def run_simulation(
     lambda_0: float,
