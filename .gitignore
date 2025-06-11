@@ -19,3 +19,9 @@ test.ipynb
 
 **/__init__.py
 
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+*.cmake
