@@ -15,8 +15,12 @@ data/
 *.txt
 *.log
 test.ipynb
+algo3.1_topdown.ipynb
+experiments.py
+Monte_Carlo_default_time_exact_v2(1).ipynb
+PlainJAM.ipynb
+Sectoral_bottom_up__sim_Copy1.ipynb
 *.png
-
 **/__init__.py
 
 CMakeFiles/
