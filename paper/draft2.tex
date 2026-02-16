@@ -1,20 +1,10 @@
-% ============================================================
-% AMORTISATION WRITE-UP â€” FINANCE RESEARCH LETTERS STYLE
-% ============================================================
-
 \documentclass[preprint,11pt]{elsarticle}
 
-% ------------------------------------------------------------
-% Page layout & typography
-% ------------------------------------------------------------
 \usepackage[letterpaper,margin=1in]{geometry}
 \usepackage{microtype}
 \usepackage{lmodern}
 \newcommand{\para}[1]{\noindent\textbf{#1}\;}
 
-% ------------------------------------------------------------
-% Math & theorem environments
-% ------------------------------------------------------------
 \usepackage{amsmath,amssymb,amsthm,mathrsfs}
 
 \theoremstyle{definition}
@@ -28,9 +18,7 @@
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}[section]
 
-% ------------------------------------------------------------
-% Section spacing (FRL-tight)
-% ------------------------------------------------------------
+
 \usepackage{titlesec}
 
 \titlespacing*{\section}
@@ -42,44 +30,27 @@
 \titlespacing*{\subsubsection}
 {0pt}{1.2ex}{0.5ex}
 
-% ------------------------------------------------------------
-% Paragraph spacing (modern econ style)
-% ------------------------------------------------------------
+
 \usepackage{parskip}
 \setlength{\parskip}{0.6em}
 
-% ------------------------------------------------------------
-% Tables & figures
-% ------------------------------------------------------------
 \usepackage{booktabs,tabularx,multirow}
 \setlength{\tabcolsep}{6pt}
 \renewcommand{\arraystretch}{1.1}
 
 \usepackage[font=small,labelfont=bf]{caption}
 
-% ------------------------------------------------------------
-% Hyperlinks (FRL-safe)
-% ------------------------------------------------------------
 \usepackage[hidelinks]{hyperref}
 
-% ------------------------------------------------------------
-% Headers & footers
-% ------------------------------------------------------------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\thepage}
 
-% ------------------------------------------------------------
-% Quotes
-% ------------------------------------------------------------
 \usepackage[english]{babel}
 \usepackage[autostyle,english=american]{csquotes}
 \MakeOuterQuote{"}
 
-% ============================================================
-% FRONT MATTER
-% ============================================================
 
 \begin{document}
 
@@ -151,7 +122,7 @@ A further departure from the base model concerns the recovery rate. Empirical ev
 
 % ============================================================
 % SECTION 2: MODEL SETUP
-% ============================================================
+
 \section{Model Setup and Paper Structure}
 
 \subsection{Amortisation Schedules}
@@ -263,7 +234,7 @@ Section~\ref{sec:conclusion} synthesizes these findings, discusses the theoretic
 
 % ============================================================
 % SECTION 3: TAIL RISK
-% ============================================================
+
 \section{Tail Risk and Expected Shortfall}
 \label{sec:tail}
 
@@ -348,7 +319,7 @@ Third, the Excess ES panel reveals that the difference in tail \emph{thickness}â
 
 % ============================================================
 % SECTION 4: SURVIVAL PROBABILITY
-% ============================================================
+
 \section{Survival Probability and Time to Systemic Stress}
 \label{sec:survival}
 
@@ -437,7 +408,7 @@ The conditional mean FPT $\hat{\mu}$ is approximately equal across Linear and Fr
 
 % ============================================================
 % SECTION 5: CONTAGION AMPLIFICATION
-% ============================================================
+
 \section{Contagion Amplification and Default Clustering}
 \label{sec:contagion}
 
@@ -514,7 +485,7 @@ This distinction has a precise implication. Because $\mathcal{A}$ is stable whil
 
 % ============================================================
 % SECTION 6: CONCLUSION
-% ============================================================
+
 \section{Conclusion}
 \label{sec:conclusion}
 
@@ -546,7 +517,7 @@ The finding that the Amplification Factor is governed by $c$ rather than by the 
 
 % ============================================================
 % BIBLIOGRAPHY
-% ============================================================
+
 \begin{thebibliography}{99}
 
 \bibitem{sinha2025}
@@ -584,7 +555,7 @@ E.~I.~Altman, B.~Brady, A.~Resti, and A.~Sironi,
 
 % ============================================================
 % APPENDICES
-% ============================================================
+
 \appendix
 
 \section{Additional Experimental Results}

@@ -35,23 +35,17 @@
 
 \begin{document}
 
-% ============================================================
-% TITLE SLIDE
-% ============================================================
+
 \begin{frame}
 \titlepage
 \end{frame}
 
-% ============================================================
-% OUTLINE
-% ============================================================
+
 \begin{frame}{Outline}
 \tableofcontents
 \end{frame}
 
-% ============================================================
-% SECTION 1: MOTIVATION
-% ============================================================
+
 \section{Motivation}
 
 \begin{frame}{The Problem: Static Exposure Assumptions}
@@ -81,13 +75,13 @@
 \draw[->] (0,0) -- (5,0) node[right] {Time};
 \draw[->] (0,0) -- (0,3) node[above] {EAD};
 
-% Static exposure (dashed)
+% Static exposure
 \draw[dashed, thick, gray] (0,2.5) -- (4.5,2.5) node[right, black] {\small Static};
 
 % Declining exposure
 \draw[thick, darkblue] (0,2.5) -- (4.5,0.5) node[right, black] {\small Amortizing};
 
-% Annotations
+
 \node[gray] at (2.5,2.8) {\small Model assumption};
 \node[darkblue] at (2.5,1.2) {\small Reality};
 \end{tikzpicture}
@@ -151,9 +145,7 @@ where $E^A(t)$ follows contractual repayment schedule
 
 \end{frame}
 
-% ============================================================
-% SECTION 2: AMORTISATION SCHEDULES
-% ============================================================
+
 \section{Amortisation Schedules}
 
 \begin{frame}{Four Canonical Repayment Structures}
@@ -268,20 +260,17 @@ Curvature reveals \emph{speed} of principal return
 \begin{column}{0.48\textwidth}
 \begin{center}
 \begin{tikzpicture}[scale=0.9]
-% Axes
+
 \draw[->] (0,0) -- (5,0) node[right] {\small Default time};
 \draw[->] (0,0) -- (0,3.5) node[above] {\small Jump size};
 
-% Bullet (constant)
+
 \draw[thick, orange, dashed] (0,3) -- (4.5,3) node[right, black] {\small Bullet};
 
-% Linear (declining)
 \draw[thick, darkblue] (0,3) -- (4.5,0.3) node[right, black] {\small Linear};
 
-% French (convex decline)
 \draw[thick, lightblue] (0,3) .. controls (1.5,2.7) and (3,1.5) .. (4.5,0.6) node[right, black] {\small French};
 
-% Annotation
 \draw[<->, gray] (2.5,0.5) -- (2.5,3) node[midway, right, black] {\small Attenuation};
 \end{tikzpicture}
 \end{center}
@@ -294,9 +283,7 @@ Curvature reveals \emph{speed} of principal return
 
 \end{frame}
 
-% ============================================================
-% SECTION 3: EXPERIMENTAL DESIGN
-% ============================================================
+
 \section{Experimental Design}
 
 \begin{frame}{Simulation Setup}
@@ -360,9 +347,7 @@ Curvature reveals \emph{speed} of principal return
 
 \end{frame}
 
-% ============================================================
-% SECTION 4: TAIL RISK RESULTS
-% ============================================================
+
 \section{Tail Risk Results}
 
 \begin{frame}{Risk Metrics: Balanced Allocation}
@@ -445,9 +430,7 @@ Linear & 187.92 & 39.41 & 254.87 & \alert{277.08} & 22.21 \\
 
 \end{frame}
 
-% ============================================================
-% SECTION 5: SURVIVAL ANALYSIS
-% ============================================================
+
 \section{Survival Analysis}
 
 \begin{frame}{First Passage Time Framework}
@@ -503,19 +486,16 @@ y^\star_D = 0.75 \times \sum_j \lambda^j_{\max}
     arrow/.style={->, thick}
 ]
 
-% Nodes
 \node[box, fill=orange!20] (default) {Default at $T_n$};
 \node[box, fill=lightblue!20, right=of default] (jump) {Intensity Jump\\$\Delta Y^j$};
 \node[box, fill=darkblue!20, text=white, right=of jump] (intensity) {Higher\\$\mathcal{Y}_t$};
 \node[box, fill=orange!20, right=of intensity] (nextdef) {More\\Defaults};
 
-% Arrows
 \draw[arrow] (default) -- (jump) node[midway, above, font=\small] {triggers};
 \draw[arrow] (jump) -- (intensity);
 \draw[arrow] (intensity) -- (nextdef);
 \draw[arrow, bend left=40] (nextdef) to node[midway, above, font=\small] {feedback loop} (default);
 
-% Attenuation annotation
 \node[below=0.3cm of jump, align=center, font=\small] {Jump size:\\$\delta \cdot \alert{E(T_n)/P} \cdot \text{LGD}$};
 
 \end{tikzpicture}
@@ -610,9 +590,7 @@ Late defaults most attenuated $\rightarrow$ delays/prevents threshold crossing
 
 \end{frame}
 
-% ============================================================
-% SECTION 6: CONTAGION MECHANISM
-% ============================================================
+
 \section{Contagion Mechanism}
 
 \begin{frame}{Peak Intensity vs Total Loss}
@@ -689,9 +667,7 @@ Linear & \alert{0.529} & 186.63 & 247.82 & \alert{1.328} \\
 \begin{center}
 \begin{tikzpicture}[scale=1, every node/.style={transform shape}]
 
-% ----------------------
-% Main mechanism boxes
-% ----------------------
+
 \node[
   draw, thick, rectangle,
   minimum width=4.6cm,
@@ -712,9 +688,7 @@ Linear & \alert{0.529} & 186.63 & 247.82 & \alert{1.328} \\
 {\textbf{Contagion $c$}\\[2pt]
 \footnotesize (clustering parameter)};
 
-% ----------------------
-% Independence marker
-% ----------------------
+
 \node[
   font=\small
 ] at (0,3.1)
@@ -723,9 +697,7 @@ Linear & \alert{0.529} & 186.63 & 247.82 & \alert{1.328} \\
 \draw[<->, thick, gray] (0,3.9) -- (0,3.3);
 \draw[<->, thick, gray] (0,2.9) -- (0,2.3);
 
-% ----------------------
-% Explanatory blocks (stacked, narrow)
-% ----------------------
+
 \node[
   align=left,
   font=\small,
@@ -757,9 +729,7 @@ Linear & \alert{0.529} & 186.63 & 247.82 & \alert{1.328} \\
 
 \end{frame}
 
-% ============================================================
-% SECTION 7: THEORETICAL FOUNDATION
-% ============================================================
+
 \section{Theoretical Foundation}
 
 \begin{frame}{Risk Ordering: Coupling Argument}
@@ -804,9 +774,7 @@ $\Rightarrow$ Heavy tails are \alert{intrinsic mathematical property}, not simul
 
 \end{frame}
 
-% ============================================================
-% SECTION 8: POLICY IMPLICATIONS
-% ============================================================
+
 \section{Policy Implications}
 
 \begin{frame}{Misspecification in Static Models}
@@ -862,7 +830,6 @@ Explicitly model time-varying EAD in capital frameworks
     arrow/.style={->, thick}
 ]
 
-% Two mechanisms
 \node[box, fill=orange!20] (c) at (0,0) {\textbf{Contagion Parameter} $c$\\
 Controls clustering multiplier\\
 {\small Affects $\mathcal{A}$ factor}};
@@ -871,7 +838,7 @@ Controls clustering multiplier\\
 Controls exposure scale\\
 {\small Affects all loss levels}};
 
-% Policy tools
+
 \node[box, fill=orange!10, below=1cm of c, minimum height=2cm] (cpolicy) {
 \textbf{Regulatory Tools:}\\
 {\small • Collateral requirements}\\
@@ -886,11 +853,10 @@ Controls exposure scale\\
 {\small • Prepayment incentives}
 };
 
-% Arrows
+
 \draw[arrow] (cpolicy) -- (c);
 \draw[arrow] (eadpolicy) -- (ead);
 
-% Independence
 \draw[<->, thick, gray, dashed] (c) -- (ead) node[midway, above] {\tiny Orthogonal mechanisms};
 
 \end{tikzpicture}
@@ -901,9 +867,7 @@ Controls exposure scale\\
 
 \end{frame}
 
-% ============================================================
-% SECTION 9: CONCLUSIONS
-% ============================================================
+
 \section{Conclusions}
 
 \begin{frame}{Summary of Findings}
@@ -1012,9 +976,6 @@ Controls exposure scale\\
 
 \end{frame}
 
-% ============================================================
-% THANK YOU
-% ============================================================
 \begin{frame}[plain]
 \begin{center}
 \vspace{2cm}
@@ -1027,9 +988,7 @@ Controls exposure scale\\
 \end{center}
 \end{frame}
 
-% ============================================================
-% BACKUP SLIDES
-% ============================================================
+
 \appendix
 
 \begin{frame}{Backup: Parameter Values}
@@ -1132,9 +1091,7 @@ Random & \multicolumn{3}{c}{$\sim \text{Dirichlet}(1,1,1)$} \\
 
 % \end{frame}
 
-% ============================================================
-% BIBLIOGRAPHY
-% ============================================================
+
 \begin{frame}[allowframebreaks]{References}
 
 \begin{thebibliography}{99}
