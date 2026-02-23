@@ -75,7 +75,7 @@ amortisation-dependent exposure schedules, we study Bullet, Linear (Italian),
 French contracts within a contagion-sensitive
 intensity model. Monte Carlo simulations show that repayment structure is the
 dominant determinant of tail risk: Bullet portfolios exhibit Expected Shortfall
-approximately 2.3 times larger than fully amortizing portfolios across all
+approximately 2.3 times larger than fully amortising portfolios across all
 sector concentration regimes. Amortisation also materially delays first passage
 to systemic stress by attenuating contagion feedback, while default clustering
 in the tail remains governed by the contagion parameter. The results have direct
@@ -114,7 +114,7 @@ The systematic intensity dynamics and contagion mechanism of \eqref{eq:base_inte
 
 The importance of time-varying exposure in credit portfolios has long been recognized in the regulatory capital literature. The Basel II and Basel III frameworks permit banks to use internal estimates of EAD for revolving facilities, acknowledging that the drawn amount at default need not equal the committed line \cite{bis2006}. For term loans and mortgages the outstanding balance follows a deterministic schedule conditional on no prepayment, yet the \emph{timing} of default relative to that schedule introduces material variability in realized losses. A borrower who defaults early in a bullet loan's life imposes a near-full-principal loss; the same event late in a well-amortized loan leaves far less outstanding. This simple observation implies that two portfolios with identical notional values and identical intensity processes can have substantially different loss distributions if their repayment architectures differ.
 
-The interaction between amortization schedules and systemic risk is less well-studied, yet highly policy-relevant. During the 2007–2009 financial crisis, a disproportionate share of losses arose from instruments whose EAD was either constant to maturity or actively growing prior to a contractual reset \cite{brunnermeier2009}. By contrast, portfolios of traditional installment loans amortized steadily and presented declining exposures even as the underlying sectors came under stress. This empirical contrast motivates a structural comparison of repayment architectures within a contagion-sensitive intensity model.
+The interaction between amortisation schedules and systemic risk is less well-studied, yet highly policy-relevant. During the 2007–2009 financial crisis, a disproportionate share of losses arose from instruments whose EAD was either constant to maturity or actively growing prior to a contractual reset \cite{brunnermeier2009}. By contrast, portfolios of traditional installment loans amortized steadily and presented declining exposures even as the underlying sectors came under stress. This empirical contrast motivates a structural comparison of repayment architectures within a contagion-sensitive intensity model.
 
 Within the intensity-based literature, \cite{errais2010} model default clustering via self-exciting processes but maintain static notional exposures. The present work fills this gap by coupling the sector-apportioned intensity framework of \cite{sinha2025} with contractually specified, time-varying EAD schedules, thereby enabling a clean decomposition of how repayment structure interacts with contagion strength to shape the portfolio loss distribution.
 
@@ -182,7 +182,7 @@ Whilst the EAD profiles in Figure~\ref{fig:ead_profiles} characterize the \emph{
 \end{equation}
 The quantity $\mathcal{M}(t)$ measures what fraction of the maximum possible credit exposure—a unit notional held for the full term—has been borne by the lender up to time $t$. Its derivative $\mathcal{M}'(t) = E(t)/(PT)$ is proportional to the instantaneous EAD, so the curvature of $\mathcal{M}(\cdot)$ directly reflects how rapidly outstanding principal is being returned.
 
-Figure~\ref{fig:cumulative_mass} plots $\mathcal{M}(t)$ for the four contracts over the five-year horizon used in the experiments. Several features are noteworthy. The Bullet contract accumulates mass linearly, reflecting its constant exposure; its curve is a straight diagonal and serves as an upper reference. The Negative Amortisation contract exceeds even this benchmark for all $t \in (0,T)$, since capitalized interest causes the outstanding balance to grow above par throughout the loan's life. Both findings are consistent with the expectation that late- or non-amortizing structures impose the greatest credit exposure on the lender.
+Figure~\ref{fig:cumulative_mass} plots $\mathcal{M}(t)$ for the four contracts over the five-year horizon used in the experiments. Several features are noteworthy. The Bullet contract accumulates mass linearly, reflecting its constant exposure; its curve is a straight diagonal and serves as an upper reference. The Negative Amortisation contract exceeds even this benchmark for all $t \in (0,T)$, since capitalized interest causes the outstanding balance to grow above par throughout the loan's life. Both findings are consistent with the expectation that late- or non-amortising structures impose the greatest credit exposure on the lender.
 
 The Linear (Italian) and French curves lie below the Bullet, but differ subtly in their degree of concavity. The Linear schedule declines at a constant rate from origination, so $\mathcal{M}_L(t) = t/T - t^2/(2T^2)$ and the associated curvature $\mathcal{M}_L''(t) = -1/T^2$ is uniform throughout the horizon. The French schedule, by contrast, exhibits a convex EAD profile: early installments are predominantly interest, so $E_F(t)$ remains close to par in the first portion of the loan's life and only begins to fall steeply as the principal component of each payment grows. As a consequence, $\mathcal{M}_F(t)$ tracks the Bullet curve closely in early periods and curves away from it only in the later half of the horizon, concentrating its concavity toward maturity.
 
@@ -224,13 +224,13 @@ Amortisation parameters are set uniformly across the portfolio: principal $P = 1
 
 \subsection{Paper Organisation}
 
-The remainder of the paper is organized as follows. In Section~\ref{sec:tail} we quantify tail risk through the lens of Expected Shortfall (ES) and Value-at-Risk (VaR) across amortisation schedules and sectoral configurations at the terminal horizon $T=1$. We establish that repayment structure is the dominant determinant of tail severity, with Bullet ES approximately $2.3$ times Linear ES across all concentration regimes—a ratio that is remarkably stable and indicates that the protective effect of amortization is not contingent on sectoral diversification.
+The remainder of the paper is organized as follows. In Section~\ref{sec:tail} we quantify tail risk through the lens of Expected Shortfall (ES) and Value-at-Risk (VaR) across amortisation schedules and sectoral configurations at the terminal horizon $T=1$. We establish that repayment structure is the dominant determinant of tail severity, with Bullet ES approximately $2.3$ times Linear ES across all concentration regimes—a ratio that is remarkably stable and indicates that the protective effect of amortisation is not contingent on sectoral diversification.
 
-Section~\ref{sec:survival} shifts focus from terminal loss magnitudes to the temporal path by which portfolios arrive at stressed states. We analyze first-passage times to critical aggregate intensity thresholds over an extended horizon $T=2$, demonstrating that early principal repayment materially extends survival time and lowers threshold-crossing probability. The analysis reveals that amortization acts as a negative feedback brake on self-exciting intensity dynamics, delaying and in some cases entirely preventing the onset of systemic stress.
+Section~\ref{sec:survival} shifts focus from terminal loss magnitudes to the temporal path by which portfolios arrive at stressed states. We analyze first-passage times to critical aggregate intensity thresholds over an extended horizon $T=2$, demonstrating that early principal repayment materially extends survival time and lowers threshold-crossing probability. The analysis reveals that amortisation acts as a negative feedback brake on self-exciting intensity dynamics, delaying and in some cases entirely preventing the onset of systemic stress.
 
-In Section~\ref{sec:contagion} we decompose the contagion mechanism through peak intensity and default clustering metrics. A key finding emerges: the Amplification Factor—measuring how much more defaults cluster in the tail relative to the unconditional mean—is approximately invariant to the EAD profile, governed instead by the contagion parameter $c$. This reveals that amortization does not alter the \emph{relative} clustering structure of the default process but rather acts as an \emph{exposure scale parameter}, attenuating every loss in the distribution proportionately without changing how defaults cluster.
+In Section~\ref{sec:contagion} we decompose the contagion mechanism through peak intensity and default clustering metrics. A key finding emerges: the Amplification Factor—measuring how much more defaults cluster in the tail relative to the unconditional mean—is approximately invariant to the EAD profile, governed instead by the contagion parameter $c$. This reveals that amortisation does not alter the \emph{relative} clustering structure of the default process but rather acts as an \emph{exposure scale parameter}, attenuating every loss in the distribution proportionately without changing how defaults cluster.
 
-Section~\ref{sec:conclusion} synthesizes these findings, discusses the theoretical foundation for the observed risk ordering through a convex ordering argument, and outlines implications for risk management and regulatory capital calibration. Additional experimental details, ablation studies focusing on alternative sector configurations and threshold specifications, and mathematical derivations appear in the appendices.
+Section~\ref{sec:conclusion} synthesizes these findings, discusses the theoretical foundation for the observed risk ordering through pathwise and convex-order comparisons, and outlines implications for risk management and regulatory capital calibration. Additional experimental details, ablation studies focusing on alternative sector configurations and threshold specifications, and mathematical derivations appear in the appendices.
 
 % ============================================================
 % SECTION 3: TAIL RISK
@@ -249,9 +249,9 @@ where $N(T)$ is the number of defaults in $[0,T]$ and $T_n$ is the time of the $
 
 Crucially, the contribution of the $n$-th default to $L_T$ is $\mathrm{LGD}^{A_n} \cdot E^{A_n}(T_n)$: the systemic intensity and the EAD are evaluated at the \emph{same time} $T_n$. This temporal alignment is the key to understanding the differences across repayment structures.
 
-For a Bullet obligor, $E_{\mathrm{B}}(T_n) = P^A$ regardless of when the default arrives, so the full principal is always at risk. For a negatively amortizing obligor, $E_{\mathrm{N}}(T_n) = P^A(1 + r_\Delta)^{n(T_n)} > P^A$, so late defaults—which are also the most likely under contagion-amplified intensity—carry an exposure that exceeds the original notional. In both cases, maximum loss coincides with the period of peak systemic stress.
+For a Bullet obligor, $E_{\mathrm{B}}(T_n) = P^A$ regardless of when the default arrives, so the full principal is always at risk. For a negatively amortising obligor, $E_{\mathrm{N}}(T_n) = P^A(1 + r_\Delta)^{n(T_n)} > P^A$, so late defaults—which are also the most likely under contagion-amplified intensity—carry an exposure that exceeds the original notional. In both cases, maximum loss coincides with the period of peak systemic stress.
 
-By contrast, for Linear and French obligors the EAD is a declining function of $T_n$, so that a late-arriving, contagion-amplified default is partially offset by the exposure reduction that amortization has already delivered. The speed and convexity of this decline, as characterized by the cumulative exposure mass in Section~2.2, directly determines how much of this offset is realized.
+By contrast, for Linear and French obligors the EAD is a declining function of $T_n$, so that a late-arriving, contagion-amplified default is partially offset by the exposure reduction that amortisation has already delivered. The speed and convexity of this decline, as characterized by the cumulative exposure mass in Section~2.2, directly determines how much of this offset is realized.
 
 \subsection{Risk Metrics under a Balanced Sector Allocation}
 
@@ -272,22 +272,22 @@ Linear  & 187.92 & 39.41 & 254.87 & 277.08 & 22.21 \\
 \end{tabular}
 \end{table}
 
-The results establish a clear ordering. The Bullet schedule generates a mean loss of 445.16 with a 95\% Expected Shortfall of 653.19—more than double the ES of either amortizing schedule. The Linear contract attains the lowest ES at 277.08, with the French annuity structure following closely at 282.88. The moderate gap between the two amortizing schedules—approximately $2\%$ in ES terms—reflects the difference in their exposure profiles identified in Section~2.2: the French schedule maintains a higher outstanding balance in the early-to-middle portion of the horizon, where the probability of contagion-amplified defaults is concentrated, whereas the Linear schedule has already returned a proportionate share of principal by that point.
+The results establish a clear ordering. The Bullet schedule generates a mean loss of 445.16 with a 95\% Expected Shortfall of 653.19—more than double the ES of either amortising schedule. The Linear contract attains the lowest ES at 277.08, with the French annuity structure following closely at 282.88. The moderate gap between the two amortising schedules—approximately $2\%$ in ES terms—reflects the difference in their exposure profiles identified in Section~2.2: the French schedule maintains a higher outstanding balance in the early-to-middle portion of the horizon, where the probability of contagion-amplified defaults is concentrated, whereas the Linear schedule has already returned a proportionate share of principal by that point.
 
-The \emph{Excess ES}, defined as $\text{ES}_{95\%} - \text{VaR}_{95\%}$, provides a measure of tail thickness conditional on a tail event having already occurred. Under the Bullet schedule, Excess ES reaches 49.51—more than double that of the amortizing schedules (22.46 and 22.21 respectively). This disproportionate expansion indicates that tail events under the Bullet are not merely more frequent but materially more severe: once the 95th percentile threshold is crossed, losses continue to accumulate substantially beyond it.
+The \emph{Excess ES}, defined as $\text{ES}_{95\%} - \text{VaR}_{95\%}$, provides a measure of tail thickness conditional on a tail event having already occurred. Under the Bullet schedule, Excess ES reaches 49.51—more than double that of the amortising schedules (22.46 and 22.21 respectively). This disproportionate expansion indicates that tail events under the Bullet are not merely more frequent but materially more severe: once the 95th percentile threshold is crossed, losses continue to accumulate substantially beyond it.
 
 \subsection{Sectoral Configuration Impact}
 
 The analysis in Table~\ref{tab:risk_metrics} holds the sectoral weight structure fixed. We now allow it to vary across the configurations introduced in Section~2.4: Balanced, Concentrated, and Mixed. Figures~\ref{fig:loss_concentrated} and~\ref{fig:loss_mixed} present the simulated loss distributions for the three completed schedules (Bullet, French, Linear) under Concentrated and Mixed sectoral configurations respectively.
 
-Across both configurations, the qualitative ordering from Table~\ref{tab:risk_metrics} is preserved: the Bullet distribution consistently exhibits the heaviest right tail and the widest spread, with the two amortizing schedules forming a tightly clustered pair well below it. Within this stable ordering, sector concentration acts as an amplifier. Comparing the Concentrated configuration to the Balanced, the Bullet tail extends considerably further to the right, whilst the amortizing schedules, though also shifting outward, do so proportionately less.
+Across both configurations, the qualitative ordering from Table~\ref{tab:risk_metrics} is preserved: the Bullet distribution consistently exhibits the heaviest right tail and the widest spread, with the two amortising schedules forming a tightly clustered pair well below it. Within this stable ordering, sector concentration acts as an amplifier. Comparing the Concentrated configuration to the Balanced, the Bullet tail extends considerably further to the right, whilst the amortising schedules, though also shifting outward, do so proportionately less.
 
 This asymmetric amplification reflects the interaction between weight concentration and the contagion feedback of \eqref{eq:feedback_normalised}: a dominant sector absorbs a larger jump $\delta^{Aj} \ell^A / P^A$ at each default, which in turn elevates the intensities of the obligors most exposed to that sector—precisely those who carry the highest weight in a concentrated portfolio. Late defaults in a Bullet portfolio therefore arrive not only into an already-stressed intensity environment but with full exposure, compounding the tail loss beyond what would occur in a diversified setting.
 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/loss_conc.png}
-\caption{Loss distributions under Concentrated sector allocation ($w^{A,1} = 0.7$). Concentration amplifies the Bullet tail disproportionately; amortizing schedules remain relatively tight.}
+\caption{Loss distributions under Concentrated sector allocation ($w^{A,1} = 0.7$). Concentration amplifies the Bullet tail disproportionately; amortising schedules remain relatively tight.}
 \label{fig:loss_concentrated}
 \end{figure}
 
@@ -298,7 +298,7 @@ This asymmetric amplification reflects the interaction between weight concentrat
 \label{fig:loss_mixed}
 \end{figure}
 
-The loss density plots also reveal a shift in distributional shape. Under the Balanced configuration (shown in Appendix~\ref{app:additional}), all three schedules produce approximately unimodal, right-skewed densities. Under the Concentrated configuration, the Bullet distribution develops a notably heavier and longer right tail, consistent with the heavy-tail amplification reported in \cite{sinha2025} for the concentrated sector case. The French and Linear distributions remain largely unimodal and relatively tight, confirming that the protective effect of continuous amortization is robust to sector concentration.
+The loss density plots also reveal a shift in distributional shape. Under the Balanced configuration (shown in Appendix~\ref{app:additional}), all three schedules produce approximately unimodal, right-skewed densities. Under the Concentrated configuration, the Bullet distribution develops a notably heavier and longer right tail, consistent with the heavy-tail amplification reported in \cite{sinha2025} for the concentrated sector case. The French and Linear distributions remain largely unimodal and relatively tight, confirming that the protective effect of continuous amortisation is robust to sector concentration.
 
 \subsection{Synthesis: ES across Schedules and Sectors}
 
@@ -311,11 +311,11 @@ Figure~\ref{fig:es_summary} consolidates the two dimensions of variation—repay
 \label{fig:es_summary}
 \end{figure}
 
-Several conclusions emerge from this joint view. First, repayment structure is the dominant determinant of the level of ES. Across all sectoral configurations, the Bullet schedule consistently registers an ES approximately 2.3 times that of the Linear schedule and 2.3 times that of the French schedule, a ratio that is remarkably stable across sector configurations. This stability indicates that the protective effect of amortization is not contingent on any particular degree of sectoral diversification.
+Several conclusions emerge from this joint view. First, repayment structure is the dominant determinant of the level of ES. Across all sectoral configurations, the Bullet schedule consistently registers an ES approximately 2.3 times that of the Linear schedule and 2.3 times that of the French schedule, a ratio that is remarkably stable across sector configurations. This stability indicates that the protective effect of amortisation is not contingent on any particular degree of sectoral diversification.
 
 Second, sector concentration governs the \emph{sensitivity} of ES to the repayment schedule. In the Concentrated configuration, the absolute gap between Bullet ES and Linear ES is wider than in the Balanced case, confirming the amplification mechanism discussed above. The Mixed configuration registers intermediate gaps throughout, consistent with its partial concentration.
 
-Third, the Excess ES panel reveals that the difference in tail \emph{thickness}—as opposed to tail \emph{level}—is also driven primarily by the repayment schedule. Even under the Balanced configuration, where sector diversification is maximal, the Bullet Excess ES is approximately double that of the amortizing schedules. This implies that the tail-thinning effect of amortization is structural and cannot be recovered by diversification alone.
+Third, the Excess ES panel reveals that the difference in tail \emph{thickness}—as opposed to tail \emph{level}—is also driven primarily by the repayment schedule. Even under the Balanced configuration, where sector diversification is maximal, the Bullet Excess ES is approximately double that of the amortising schedules. This implies that the tail-thinning effect of amortisation is structural and cannot be recovered by diversification alone.
 
 % ============================================================
 % SECTION 4: SURVIVAL PROBABILITY
@@ -343,7 +343,7 @@ S(t) \;=\; \mathbb{P}(\tau^\star > t).
 \label{eq:survival}
 \end{equation}
 
-To ensure robustness of conclusions, we evaluate \eqref{eq:fpt} under a Deterministic threshold specification: $y^\star_{\mathrm{D}} = 0.75 \times \sum_{j=1}^{J} \lambda^j_{\max}$, a fixed proportion of the maximum theoretical baseline intensity. This threshold is independent of any particular Monte Carlo sample, making it transparent and replicable across parameterizations. Results under an alternative Dynamic Quantile threshold appear in Appendix~\ref{app:survival}.
+To ensure robustness of conclusions, we evaluate \eqref{eq:fpt} under a Deterministic threshold specification: $y^\star_{\mathrm{D}} = 0.75 \times \sum_{j=1}^{J} \lambda^j_{\max}$, a fixed proportion of the acceptance--rejection intensity envelope used in simulation. This threshold is independent of any particular Monte Carlo sample, making it transparent and replicable across parameterizations. Results under an alternative Dynamic Quantile threshold appear in Appendix~\ref{app:survival}.
 
 For each schedule and sector configuration, we simulate $M = 2{,}500$ independent paths of the full system over an extended horizon $T=2$—double the terminal loss horizon used in Section~\ref{sec:tail}—to allow sufficient time for stress dynamics to develop. Each path yields a first passage time $\tau^\star_m \in (0, +\infty]$. The empirical survival function is estimated as
 \begin{equation}
@@ -354,14 +354,14 @@ Two summary statistics are extracted for each configuration: the probability of 
 
 \subsection{Mechanism: Amortisation Delays First Passage}
 
-The connection between amortization and the first passage time runs directly through the normalized feedback of \eqref{eq:feedback_normalised}. Each default event at time $T_n$ generates a jump in the sectoral intensities of magnitude
+The connection between amortisation and the first passage time runs directly through the normalized feedback of \eqref{eq:feedback_normalised}. Each default event at time $T_n$ generates a jump in the sectoral intensities of magnitude
 \begin{equation}
 \Delta Y^j_{T_n} \;=\; \delta^{A_n j}\,\frac{\mathrm{LGD}^{A_n} \cdot E^{A_n}(T_n)}{P^{A_n}}.
 \label{eq:jump_fpt}
 \end{equation}
-For a Bullet obligor, $E^{A_n}(T_n) = P^{A_n}$ for all $T_n < T$, so the normalized jump is simply $\delta^{A_n j} \cdot \mathrm{LGD}^{A_n}$, independent of when the default occurs. For a Linear or French obligor, $E^{A_n}(T_n)/P^{A_n} < 1$ for any $T_n > 0$, and this ratio declines monotonically with $T_n$. It follows that, for any fixed realization of the LGD, an amortizing obligor generates a strictly smaller intensity jump than a Bullet obligor defaulting at the same time.
+For a Bullet obligor, $E^{A_n}(T_n) = P^{A_n}$ for all $T_n < T$, so the normalized jump is simply $\delta^{A_n j} \cdot \mathrm{LGD}^{A_n}$, independent of when the default occurs. For a Linear or French obligor, $E^{A_n}(T_n)/P^{A_n} < 1$ for any $T_n > 0$, and this ratio declines monotonically with $T_n$. It follows that, for any fixed realization of the LGD, an amortising obligor generates a strictly smaller intensity jump than a Bullet obligor defaulting at the same time.
 
-This attenuated jump slows the self-reinforcing feedback loop that drives $\mathcal{Y}_t$ towards $y^\star$, delaying and in some paths entirely preventing the threshold crossing. The attenuation is most pronounced for defaults that arrive late in the horizon, when contagion has already built up and the portfolio is closest to the threshold. For the Linear schedule, $E_{\mathrm{L}}(t)/P = 1 - t/T$, so a default at $t = 0.8T$ carries only 20\% of the full principal as contagion weight. For the French schedule, $E_{\mathrm{F}}(t)/P$ remains closer to unity throughout—reflecting the convex EAD profile—so the attenuation is less pronounced than for Linear in the early-to-middle part of the horizon but comparable near maturity. This difference mirrors the finding from Sections~2.2 and~\ref{sec:tail} that the Linear schedule provides marginally more tail protection than the French under the same contagion parameter.
+This attenuated jump slows the self-reinforcing feedback loop that drives $\mathcal{Y}_t$ towards $y^\star$, delaying and in some paths entirely preventing the threshold crossing. The attenuation is most pronounced for defaults that arrive late in the horizon, when contagion has already built up and the portfolio is closest to the threshold. For the Linear schedule in the continuous-time idealization, $E_{\mathrm{L}}(t)/P = 1 - t/T$, so a default at $t = 0.8T$ carries only 20\% of the full principal as contagion weight. In the implemented discrete schedule this holds approximately up to payment-grid effects. For the French schedule, $E_{\mathrm{F}}(t)/P$ remains closer to unity throughout—reflecting the convex EAD profile—so the attenuation is less pronounced than for Linear in the early-to-middle part of the horizon but comparable near maturity. This difference mirrors the finding from Sections~2.2 and~\ref{sec:tail} that the Linear schedule provides marginally more tail protection than the French under the same contagion parameter.
 
 \subsection{Results: Concentrated Sector Allocation}
 
@@ -370,13 +370,13 @@ Figure~\ref{fig:survival_con_d} presents the empirical survival curves under the
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=0.75\textwidth]{figures/survival_con_det.png}
-\caption{Survival probability under Concentrated allocation over horizon $T=2$. Amortizing schedules maintain substantially higher terminal survival probability; gap widens under concentration.}
+\caption{Survival probability under Concentrated allocation over horizon $T=2$. Amortising schedules maintain substantially higher terminal survival probability; gap widens under concentration.}
 \label{fig:survival_con_d}
 \end{figure}
 
-Concentration has two compounding effects on the first passage time. First, it raises the baseline level of sectoral intensity: with the majority of obligors co-exposed to a single dominant sector, any default within that sector generates a large concentrated jump in $Y^1_t$, accelerating $\mathcal{Y}_t$ towards $y^\star$. Second, it reduces the stabilizing effect of amortization proportionately less than it accelerates the Bullet schedule. Because the dominant sector absorbs a fraction $w^{A,1} = 0.7$ of every contagion jump \eqref{eq:jump_fpt}, and because the Bullet schedule keeps this jump at its maximum level for all $T_n \in [0,T)$, the concentrated Bullet portfolio reaches the threshold with substantially higher probability and at substantially earlier times than in the Balanced case.
+Concentration has two compounding effects on the first passage time. First, it raises the baseline level of sectoral intensity: with the majority of obligors co-exposed to a single dominant sector, any default within that sector generates a large concentrated jump in $Y^1_t$, accelerating $\mathcal{Y}_t$ towards $y^\star$. Second, it reduces the stabilizing effect of amortisation proportionately less than it accelerates the Bullet schedule. Because the dominant sector absorbs a fraction $w^{A,1} = 0.7$ of every contagion jump \eqref{eq:jump_fpt}, and because the Bullet schedule keeps this jump at its maximum level for all $T_n \in [0,T)$, the concentrated Bullet portfolio reaches the threshold with substantially higher probability and at substantially earlier times than in the Balanced case.
 
-The amortizing schedules are also accelerated under concentration, but proportionately less so: the attenuation of their contagion jumps through declining EAD still operates, even if the dominant sector amplifies those jumps before attenuation. Consequently, under the Concentrated configuration the survival curves of all three schedules shift towards earlier first passage times and lower terminal survival probabilities $\hat{S}(T)$. The gap between the Bullet and the amortizing curves remains clearly visible and actually widens in absolute probability terms, confirming that the protective effect of amortization is not eroded by concentration but rather strengthened by it.
+The amortising schedules are also accelerated under concentration, but proportionately less so: the attenuation of their contagion jumps through declining EAD still operates, even if the dominant sector amplifies those jumps before attenuation. Consequently, under the Concentrated configuration the survival curves of all three schedules shift towards earlier first passage times and lower terminal survival probabilities $\hat{S}(T)$. The gap between the Bullet and the amortising curves remains clearly visible and actually widens in absolute probability terms, confirming that the protective effect of amortisation is not eroded by concentration but rather strengthened by it.
 
 \subsection{Summary Metrics}
 
@@ -402,9 +402,9 @@ Table~\ref{tab:fpt_metrics} reports the two scalar FPT statistics for each combi
 \end{tabular}
 \end{table}
 
-Several patterns deserve emphasis. The probability of first passage $\hat{p}$ is uniformly highest for the Bullet schedule and lowest for the Linear schedule across both configurations. Under the Balanced configuration the gap between Bullet and Linear first-passage probabilities is substantial (0.985 versus 0.129), confirming that a meaningful fraction of amortizing-portfolio paths avoid systemic stress entirely within the horizon. Under the Concentrated configuration, first-passage probabilities rise for all schedules, but the Bullet schedule consistently reaches values close to 1 whilst the amortizing schedules retain a lower probability (0.799 for Linear, 0.854 for French), reflecting the attenuated contagion mechanism.
+Several patterns deserve emphasis. The probability of first passage $\hat{p}$ is uniformly highest for the Bullet schedule and lowest for the Linear schedule across both configurations. Under the Balanced configuration the gap between Bullet and Linear first-passage probabilities is substantial (0.985 versus 0.129), confirming that a meaningful fraction of amortising-portfolio paths avoid systemic stress entirely within the horizon. Under the Concentrated configuration, first-passage probabilities rise for all schedules, but the Bullet schedule consistently reaches values close to 1 whilst the amortising schedules retain a lower probability (0.799 for Linear, 0.854 for French), reflecting the attenuated contagion mechanism.
 
-The conditional mean FPT $\hat{\mu}$ is approximately equal across Linear and French in both cases, and strictly shorter for Bullet. This ordering is consistent with the EAD-attenuation mechanism: the Linear schedule reduces EAD at a constant rate from the outset, so its contagion-dampening effect is strongest in the early and middle portions of the horizon where crossing is most likely; the French schedule delivers comparable attenuation only later, when the annuity structure's accelerating amortization catches up. Under concentration, all conditional mean FPTs shorten, but the relative ordering and the magnitude of the Linear–Bullet gap are preserved.
+The conditional mean FPT $\hat{\mu}$ is approximately equal across Linear and French in both cases, and strictly shorter for Bullet. This ordering is consistent with the EAD-attenuation mechanism: the Linear schedule reduces EAD at a constant rate from the outset, so its contagion-dampening effect is strongest in the early and middle portions of the horizon where crossing is most likely; the French schedule delivers comparable attenuation only later, when the annuity structure's accelerating amortisation catches up. Under concentration, all conditional mean FPTs shorten, but the relative ordering and the magnitude of the Linear–Bullet gap are preserved.
 
 % ============================================================
 % SECTION 5: CONTAGION AMPLIFICATION
@@ -421,9 +421,9 @@ The bridge between EAD and contagion is the normalized feedback of~\eqref{eq:fee
 \Delta\mathcal{Y}_{T_n} \;=\; \sum_{j=1}^{J} \delta^{A_n j}\, \frac{\mathrm{LGD}^{A_n} \cdot E^{A_n}(T_n)}{P^{A_n}}.
 \label{eq:agg_jump}
 \end{equation}
-For a Bullet obligor, $E^{A_n}(T_n)/P^{A_n} = 1$ throughout, so every default delivers the maximum possible feedback regardless of timing. For a negatively amortizing obligor, this ratio exceeds unity, so defaults—which are themselves more likely when intensity is elevated—deliver \emph{super-par} jumps, creating a doubly reinforcing feedback loop. For Linear and French obligors the ratio is strictly less than one for any $T_n > 0$ and monotonically declining, attenuating each contagion jump relative to the Bullet benchmark.
+For a Bullet obligor, $E^{A_n}(T_n)/P^{A_n} = 1$ throughout, so every default delivers the maximum possible feedback regardless of timing. For a negatively amortising obligor, this ratio exceeds unity, so defaults—which are themselves more likely when intensity is elevated—deliver \emph{super-par} jumps, creating a doubly reinforcing feedback loop. For Linear and French obligors the ratio is strictly less than one for any $T_n > 0$ and monotonically declining, attenuating each contagion jump relative to the Bullet benchmark.
 
-This attenuation has a compounding character. Early defaults reduce $\mathcal{Y}_t$ below the Bullet trajectory, which in turn reduces the probability of subsequent defaults, which in turn reduces the future feedback into $\mathcal{Y}_t$. The amortization schedule therefore acts as a \emph{negative feedback brake} on the self-exciting intensity process, whilst the Bullet (and Negative Amortisation) schedules remove this brake entirely or reverse it. The consequence is not merely a shift in the loss distribution—it is a qualitative change in the dynamics of $\mathcal{Y}_t$ under stress, which we now quantify.
+This attenuation has a compounding character. Early defaults reduce $\mathcal{Y}_t$ below the Bullet trajectory, which in turn reduces the probability of subsequent defaults, which in turn reduces the future feedback into $\mathcal{Y}_t$. The amortisation schedule therefore acts as a \emph{negative feedback brake} on the self-exciting intensity process, whilst the Bullet (and Negative Amortisation) schedules remove this brake entirely or reverse it. The consequence is not merely a shift in the loss distribution—it is a qualitative change in the dynamics of $\mathcal{Y}_t$ under stress, which we now quantify.
 
 \subsection{Peak Systemic Intensity}
 
@@ -441,11 +441,11 @@ Figure~\ref{fig:ymax_scatter} presents a scatter plot of $\mathcal{Y}_{\max}$ ag
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=0.75\textwidth]{figures/ymax_scatter.png}
-\caption{Peak intensity versus total loss under Balanced allocation. Amortizing schedules show compressed clouds with shallower slopes.}
+\caption{Peak intensity versus total loss under Balanced allocation. Amortising schedules show compressed clouds with shallower slopes.}
 \label{fig:ymax_scatter}
 \end{figure}
 
-Crucially, the clouds for the Bullet and Negative Amortisation schedules are shifted both rightward (higher $L_T$) and upward (higher $\mathcal{Y}_{\max}$) relative to the amortizing schedules, and the two dimensions of shift are proportionally aligned: larger intensity peaks produce larger total losses because the firms surviving to the peak are still exposed to near-full or super-par principal. Under the amortizing schedules the clouds are more compressed, and the slope of the $\mathcal{Y}_{\max}$–$L_T$ relationship is shallower: even when the intensity does spike, the reduced EAD limits the loss that the spike can generate. This compression is the geometric expression of the negative-feedback brake described above.
+Crucially, the clouds for the Bullet and Negative Amortisation schedules are shifted both rightward (higher $L_T$) and upward (higher $\mathcal{Y}_{\max}$) relative to the amortising schedules, and the two dimensions of shift are proportionally aligned: larger intensity peaks produce larger total losses because the firms surviving to the peak are still exposed to near-full or super-par principal. Under the amortising schedules the clouds are more compressed, and the slope of the $\mathcal{Y}_{\max}$–$L_T$ relationship is shallower: even when the intensity does spike, the reduced EAD limits the loss that the spike can generate. This compression is the geometric expression of the negative-feedback brake described above.
 
 \subsection{Default Clustering and Amplification Factor}
 
@@ -479,9 +479,9 @@ Linear & 0.529 & 186.63 & 247.82 & 1.328 \\
 \end{tabular}
 \end{table}
 
-The amortization schedule is therefore not a clustering parameter—it does not alter \emph{how much more} defaults cluster in the tail relative to the unconditional mean—but rather an \emph{exposure scale parameter} that determines the loss consequence of each default in the cluster.
+The amortisation schedule is therefore not a clustering parameter—it does not alter \emph{how much more} defaults cluster in the tail relative to the unconditional mean—but rather an \emph{exposure scale parameter} that determines the loss consequence of each default in the cluster.
 
-This distinction has a precise implication. Because $\mathcal{A}$ is stable whilst $\mathbb{E}[N(T) \mid \text{Tail}]$ differs substantially across schedules—from 247.82 under Linear to 358.69 under Bullet, a difference of more than 110 defaults—the gap is entirely attributable to the difference in $\mathbb{E}[N(T)]$ itself. The Bullet portfolio simply experiences more defaults in expectation, because elevated EAD amplifies the contagion jump at each event, raising the subsequent intensity and accelerating future defaults. The higher conditional tail count is thus a consequence of the same positive feedback loop that elevates $\mathcal{Y}_{\max}$, not an independent clustering effect. Amortization suppresses the unconditional default rate, and this suppression scales proportionately into the tail.
+This distinction has a precise implication. Because $\mathcal{A}$ is stable whilst $\mathbb{E}[N(T) \mid \text{Tail}]$ differs substantially across schedules—from 247.82 under Linear to 358.69 under Bullet, a difference of more than 110 defaults—the gap is entirely attributable to the difference in $\mathbb{E}[N(T)]$ itself. The Bullet portfolio simply experiences more defaults in expectation, because elevated EAD amplifies the contagion jump at each event, raising the subsequent intensity and accelerating future defaults. The higher conditional tail count is thus a consequence of the same positive feedback loop that elevates $\mathcal{Y}_{\max}$, not an independent clustering effect. Amortisation suppresses the unconditional default rate, and this suppression scales proportionately into the tail.
 
 % ============================================================
 % SECTION 6: CONCLUSION
@@ -493,27 +493,63 @@ This distinction has a precise implication. Because $\mathcal{A}$ is stable whil
 
 This paper has extended the sector-apportioned intensity framework of \cite{sinha2025} by replacing the static, uniform loss draw with contractually specified, time-varying EAD schedules and a Beta-distributed stochastic LGD. Three canonical amortisation structures—Bullet, Linear (Italian), French—were evaluated across sectoral concentration regimes using the asymptotically exact acceptance-rejection algorithm of \cite{giesecke2011}.
 
-Three quantitative findings stand out. First, repayment structure is the dominant determinant of tail loss severity. The Bullet schedule generates a 95\% Expected Shortfall approximately $2.3$ times that of the Linear schedule under a Balanced sector allocation, a ratio that is remarkably stable across concentration regimes. This stability indicates that the protective effect of amortization operates independently of sectoral diversification.
+Three quantitative findings stand out. First, repayment structure is the dominant determinant of tail loss severity. The Bullet schedule generates a 95\% Expected Shortfall approximately $2.3$ times that of the Linear schedule under a Balanced sector allocation, a ratio that is remarkably stable across concentration regimes. This stability indicates that the protective effect of amortisation operates independently of sectoral diversification.
 
 Second, early principal repayment materially extends the system's survival time. Linear and French portfolios exhibit substantially lower first-passage probabilities and longer conditional mean passage times to the systemic stress threshold, regardless of which threshold specification is used. This temporal dimension is at least as important as the terminal loss magnitude from a risk management perspective, since it determines how much time is available for supervisory intervention before the portfolio enters a stressed regime.
 
-Third, the Amplification Factor—the ratio of conditional-tail to unconditional expected defaults—is approximately invariant to the repayment schedule, ranging from $1.33$ to $1.36$ across all three completed schedules. This near-invariance reveals that amortization does not alter the clustering structure of the default process, which is governed by the contagion parameter $c$; it acts instead as an exposure scale parameter that attenuates every loss in the distribution, including those in the tail, proportionately and unconditionally.
+Third, the Amplification Factor—the ratio of conditional-tail to unconditional expected defaults—is approximately invariant to the repayment schedule, ranging from $1.33$ to $1.36$ across all three completed schedules. This near-invariance reveals that amortisation does not alter the clustering structure of the default process, which is governed by the contagion parameter $c$; it acts instead as an exposure scale parameter that attenuates every loss in the distribution, including those in the tail, proportionately and unconditionally.
 
 \subsection{Risk Ordering}
 
-Beyond the simulation evidence, the direction of the risk ordering across repayment structures can be established via a coupling argument rooted in the model's jump structure. Consider two portfolios, $\mathcal{P}_A$ and $\mathcal{P}_B$, driven by identical realizations of the Brownian motions $\{W^j_t\}$, idiosyncratic factors $\{X^A\}$, and LGD draws $\{\mathrm{LGD}^A\}$, but with exposure schedules satisfying $E^A_{\mathcal{P}_A}(t) \leq E^A_{\mathcal{P}_B}(t)$ for all obligors $A$ and all times $t \in [0,T]$.
+Beyond the Monte Carlo evidence, the direction of the risk ordering across repayment structures follows from a structural coupling argument.
 
-Under this coupling, the first default time $T_1$ is identical across both portfolios, since the intensity process prior to the first event is driven entirely by the sectoral CIR dynamics and the idiosyncratic constants, which are common. However, the contagion jump at $T_1$ satisfies $\Delta\mathcal{Y}_{T_1}^{\mathcal{P}_B} \geq \Delta\mathcal{Y}_{T_1}^{\mathcal{P}_A}$ pathwise, because $E^{A_1}_{\mathcal{P}_B}(T_1) \geq E^{A_1}_{\mathcal{P}_A}(T_1)$ by assumption. After $T_1$, the sectoral intensity of $\mathcal{P}_B$ lies at or above that of $\mathcal{P}_A$ on every path. By the stochastic comparison theorem for jump-diffusions, this implies first-order stochastic dominance $L_T^{\mathcal{P}_B} \geq_{\mathrm{st}} L_T^{\mathcal{P}_A}$, which in turn gives convex ordering $L_T^{\mathcal{P}_A} \leq_{cx} L_T^{\mathcal{P}_B}$.
+Consider two portfolios $\mathcal P_A$ and $\mathcal P_B$ constructed on the same filtered probability space, driven by identical Brownian motions, idiosyncratic factors, and LGD draws, but with exposure schedules satisfying
+\[
+E^A_{\mathcal P_A}(t)
+\le
+E^A_{\mathcal P_B}(t)
+\quad \forall A,\ \forall t\in[0,T].
+\]
 
-Since Expected Shortfall is a coherent risk measure that is monotone with respect to convex order, we obtain $\mathrm{ES}_\alpha(L_T^{\mathcal{P}_A}) \leq \mathrm{ES}_\alpha(L_T^{\mathcal{P}_B})$ for all $\alpha \in (0,1)$. The EAD pointwise ordering is satisfied by the schedule hierarchy identified empirically: $E_{\mathrm{Linear}}(t) \leq E_{\mathrm{French}}(t) \leq E_{\mathrm{Bullet}}(t) \leq E_{\mathrm{Neg.\,Am.}}(t)$ for all $t \in (0, T)$, yielding the ES ordering observed in the Monte Carlo results. The heavy tails are therefore not artifacts of the chosen parameterization; they are intrinsic mathematical properties of the contagion feedback loop when principal repayment is deferred. A detailed proof appears in ~\ref{app:math}.
+Under this coupling, contagion jumps in the sectoral CIR factors are larger in $\mathcal P_B$ at every default event. By the comparison theorem for one–dimensional SDEs with identical diffusion coefficients (Ikeda and Watanabe~\cite{ikeda1989}; Karatzas and Shreve~\cite{karatzas1991}), the sectoral factors and hence obligor intensities remain ordered pathwise. Using the standard time–change construction of Cox processes (Brémaud~\cite{bremaud1981}; Lando~\cite{lando2004}), this yields pathwise ordering of default times and therefore
+
+\[
+L_T^{\mathcal P_A}
+\le
+L_T^{\mathcal P_B}
+\quad \text{almost surely}.
+\]
+
+Expected Shortfall, being a coherent and monotone risk measure (Artzner et al.~\cite{artzner1999}), preserves this ordering:
+\[
+\mathrm{ES}_\alpha(L_T^{\mathcal P_A})
+\le
+\mathrm{ES}_\alpha(L_T^{\mathcal P_B})
+\quad \forall \alpha\in(0,1).
+\]
+
+The exposure hierarchy
+\[
+E_{\mathrm{Linear}}(t)
+\le
+E_{\mathrm{French}}(t)
+\le
+E_{\mathrm{Bullet}}(t)
+\le
+E_{\mathrm{Neg.\,Am.}}(t)
+\quad \forall t\in(0,T)
+\]
+therefore implies the corresponding Expected Shortfall ordering observed in the simulations.
+
+The lighter tails generated by amortisation structures are thus structural consequences of contagion feedback interacting with exposure persistence, rather than artifacts of calibration.
 
 \subsection{Implications for Risk Management}
 
-These results carry direct implications for the calibration of credit risk models in practice. Static-EAD models—in which every loan is treated as a zero-coupon bond with constant notional—implicitly apply the Bullet schedule to all instruments. When such models are used to compute economic capital or regulatory stress tests for portfolios that are predominantly composed of amortizing loans (residential mortgages, consumer installment credit, project finance), they systematically \emph{overestimate} tail risk. Conversely, when the portfolio contains instruments with payment-in-kind provisions, interest capitalization, or commitment facilities that can grow up to a reset date, a static model \emph{underestimates} the tail by treating the current drawn balance as a fixed exposure.
+These results carry direct implications for the calibration of credit risk models in practice. Static-EAD models—in which every loan is treated as a zero-coupon bond with constant notional—implicitly apply the Bullet schedule to all instruments. When such models are used to compute economic capital or regulatory stress tests for portfolios that are predominantly composed of amortising loans (residential mortgages, consumer installment credit, project finance), they systematically \emph{overestimate} tail risk. Conversely, when the portfolio contains instruments with payment-in-kind provisions, interest capitalization, or commitment facilities that can grow up to a reset date, a static model \emph{underestimates} the tail by treating the current drawn balance as a fixed exposure.
 
-The simulation results quantify this misspecification: under a Balanced sector allocation the static Bullet ES is $2.3$ times the Linear ES, implying that a capital model that ignores amortization may carry roughly twice as much economic capital as is warranted for a fully amortizing portfolio, or half as much as is required for a negatively amortizing one. The magnitude of this error is not attenuated by sectoral diversification: the $2.3\times$ ratio is stable across Balanced, Mixed, and Concentrated configurations, indicating that diversification and amortization are orthogonal risk-reduction mechanisms. Both should be accounted for independently in any well-specified capital framework.
+The simulation results quantify this misspecification: under a Balanced sector allocation the static Bullet ES is $2.3$ times the Linear ES, implying that a capital model that ignores amortisation may carry roughly twice as much economic capital as is warranted for a fully amortising portfolio, or half as much as is required for a negatively amortising one. The magnitude of this error is not attenuated by sectoral diversification: the $2.3\times$ ratio is stable across Balanced, Mixed, and Concentrated configurations, indicating that diversification and amortisation are orthogonal risk-reduction mechanisms. Both should be accounted for independently in any well-specified capital framework.
 
-The finding that the Amplification Factor is governed by $c$ rather than by the EAD profile suggests a clean separation of policy levers. Regulatory tools that operate through collateral requirements, concentration limits, or macroprudential buffers target $c$ and reduce the clustering multiplier; tools that mandate minimum amortization rates or restrict negatively amortizing products target the EAD scale and reduce the base level of all losses, including tail losses, without altering the clustering structure. The two mechanisms are complementary, not substitutable, and both should be actively managed in a comprehensive risk framework.
+The finding that the Amplification Factor is governed by $c$ rather than by the EAD profile suggests a clean separation of policy levers. Regulatory tools that operate through collateral requirements, concentration limits, or macroprudential buffers target $c$ and reduce the clustering multiplier; tools that mandate minimum amortisation rates or restrict negatively amortising products target the EAD scale and reduce the base level of all losses, including tail losses, without altering the clustering structure. The two mechanisms are complementary, not substitutable, and both should be actively managed in a comprehensive risk framework.
 
 % ============================================================
 % BIBLIOGRAPHY
@@ -549,6 +585,31 @@ M.~K.~Brunnermeier,
 E.~I.~Altman, B.~Brady, A.~Resti, and A.~Sironi,
 ``The Link Between Default and Recovery Rates: Theory, Empirical Evidence, and Implications,''
 \textit{Journal of Business}, vol.~78, no.~6, pp.~2203--2227, 2005.
+
+\bibitem{ikeda1989}
+N.~Ikeda and S.~Watanabe,
+\textit{Stochastic Differential Equations and Diffusion Processes},
+2nd ed., North-Holland, Amsterdam, 1989.
+
+\bibitem{karatzas1991}
+I.~Karatzas and S.~E.~Shreve,
+\textit{Brownian Motion and Stochastic Calculus},
+2nd ed., Springer, New York, 1991.
+
+\bibitem{bremaud1981}
+P.~Brémaud,
+\textit{Point Processes and Queues: Martingale Dynamics},
+Springer, New York, 1981.
+
+\bibitem{lando2004}
+D.~Lando,
+\textit{Credit Risk Modeling: Theory and Applications},
+Princeton University Press, Princeton, 2004.
+
+\bibitem{artzner1999}
+P.~Artzner, F.~Delbaen, J.-M.~Eber, and D.~Heath,
+``Coherent Measures of Risk,''
+\textit{Mathematical Finance}, vol.~9, no.~3, pp.~203--228, 1999.
 
 \end{thebibliography}
 \newpage
@@ -632,112 +693,160 @@ Dynamic Quantile is data-adaptive; Deterministic is transparent and simulation-i
 \section{Mathematical Derivations}
 \label{app:math}
 
-\subsection{Convex Ordering: Detailed Argument}
+\subsection{Loss Ordering Under Exposure Dominance}
+% \label{app:math}
 
-We provide full proof sketch of convex ordering result stated in Section~\ref{sec:conclusion}.
+We formalise the loss ordering induced by pointwise exposure dominance.
 
 \begin{proposition}
-Let $\mathcal{P}_A$, $\mathcal{P}_B$ be two portfolios with exposure schedules satisfying
+Let $\mathcal{P}_A$, $\mathcal{P}_B$ be two portfolios constructed on the same filtered probability space $(\Omega,\mathcal{F},\mathbb{F},\mathbb{P})$, driven by identical Brownian motions $\{W^j\}_{j=1}^J$, identical idiosyncratic factors $\{X^A\}$, and identical LGD draws $\{\mathrm{LGD}^A\}$.
+
+Assume the exposure schedules satisfy
 \[
-E^A_{\mathcal{P}_A}(t) \;\leq\; E^A_{\mathcal{P}_B}(t) \qquad \forall\, A,\, \forall\, t \in [0,T],
+E^A_{\mathcal{P}_A}(t)
+\le
+E^A_{\mathcal{P}_B}(t)
+\qquad
+\forall A,\ \forall t\in[0,T].
 \]
-and all other model primitives (Brownian motions, idiosyncratic factors, LGD draws) identical. Then
+
+Then
 \[
-L_T^{\mathcal{P}_A} \;\leq_{cx}\; L_T^{\mathcal{P}_B},
+L_T^{\mathcal{P}_A}
+\le
+L_T^{\mathcal{P}_B}
+\quad \text{almost surely}.
 \]
-implying $\mathrm{ES}_\alpha(L_T^{\mathcal{P}_A}) \leq \mathrm{ES}_\alpha(L_T^{\mathcal{P}_B})$ for all $\alpha \in (0,1)$.
+Consequently,
+\[
+L_T^{\mathcal{P}_A}
+\le_{st}
+L_T^{\mathcal{P}_B},
+\]
+and
+\[
+\mathrm{ES}_\alpha(L_T^{\mathcal{P}_A})
+\le
+\mathrm{ES}_\alpha(L_T^{\mathcal{P}_B})
+\quad \forall \alpha\in(0,1).
+\]
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-\textbf{Step 1: Pathwise coupling.}
-By construction, all randomness (Brownian increments $\{W^j_t\}$, $\{X^A\}$, $\{\mathrm{LGD}^A\}$) identical across $\mathcal{P}_A$, $\mathcal{P}_B$ on same probability space. Only difference is EAD schedule.
+\begin{proof}
+\textbf{1. Sectoral intensity comparison.}
 
-\textbf{Step 2: First default time.}
-Intensity process prior to first default:
+Between contagion jumps, sectoral factors follow CIR dynamics
 \[
-\lambda^A_t \;=\; X^A \;+\; \sum_{j=1}^{J} w^{Aj}\,Y^j_t,
-\]
-with $Y^j_t$ following CIR dynamics driven by $W^j_t$. Since $\{W^j_t\}$, $\{X^A\}$ identical, intensity paths identical up to $T_1$. Thus $T_1$ same in both portfolios.
-
-\textbf{Step 3: Contagion jump comparison.}
-At $T_1$, defaulting obligor $A_1$ is the same (determined by intensity magnitudes, which are identical). 
-The contagion jump in sector $j$ is
-\[
-\Delta Y^j_{T_1}(\mathcal{P}_B)
-\;=\;
-\delta^{A_1 j}\,\frac{\mathrm{LGD}^{A_1} \cdot E^{A_1}_{\mathcal{P}_B}(T_1)}{P^{A_1}}
-\;\geq\;
-\delta^{A_1 j}\,\frac{\mathrm{LGD}^{A_1} \cdot E^{A_1}_{\mathcal{P}_A}(T_1)}{P^{A_1}}
-\;=\;
-\Delta Y^j_{T_1}(\mathcal{P}_A),
-\]
-because $E^{A_1}_{\mathcal{P}_B}(T_1) \geq E^{A_1}_{\mathcal{P}_A}(T_1)$ by assumption and $\mathrm{LGD}^{A_1}$ is identical.
-
-\textbf{Step 4: Intensity dominance propagation.}
-Post-$T_1$, for $t > T_1$:
-\[
-Y^j_t(\mathcal{P})
-\;=\;
-Y^j_{T_1^-}
-\;+\;
-\Delta Y^j_{T_1}(\mathcal{P})
-\;+\;
-\int_{T_1}^t (\cdots)\,\mathrm{d}s
-\;+\;
-\int_{T_1}^t \sigma^j\sqrt{Y^j_s(\mathcal{P})}\,\mathrm{d}W^j_s.
-\]
-Since the Brownian increment $\int_{T_1}^t \mathrm{d}W^j_s$ is the same, the drift has the same functional form, and
-$Y^j_{T_1^-}$ is identical, but
-\[
-\Delta Y^j_{T_1}(\mathcal{P}_B) \;\geq\; \Delta Y^j_{T_1}(\mathcal{P}_A),
-\]
-the comparison theorem for SDEs yields
-\[
-Y^j_t(\mathcal{P}_B) \;\geq\; Y^j_t(\mathcal{P}_A)
-\quad \text{pathwise for all } t > T_1.
+dY^j_t
+=
+\kappa_j(\theta_j - Y^j_t)\,dt
++
+\sigma_j \sqrt{Y^j_t}\, dW^j_t.
 \]
 
-\textbf{Step 5: Subsequent defaults.}
-Higher intensity $\lambda^A_t(\mathcal{P}_B) \geq \lambda^A_t(\mathcal{P}_A)$ implies defaults arrive earlier in $\mathcal{P}_B$ (in stochastic sense). Each subsequent default in $\mathcal{P}_B$ inflicts larger contagion jump than corresponding default in $\mathcal{P}_A$ (by EAD ordering), further widening intensity gap. By induction, intensity dominance propagates through all default events.
-
-\textbf{Step 6: Loss process dominance.}
-Cumulative loss:
+At default time $T_k$ of obligor $A_k$, the jump size is
 \[
-L_T \;=\; \sum_{n=1}^{N(T)} \mathrm{LGD}^{A_n} \cdot E^{A_n}(T_n).
-\]
-Since $N(T)$ is stochastically larger in $\mathcal{P}_B$ (higher intensity), and each individual loss $\mathrm{LGD}^{A_n} \cdot E^{A_n}(T_n)$ weakly larger in $\mathcal{P}_B$ (EAD ordering), we have
-\[
-L_T^{\mathcal{P}_B} \;\geq_{\mathrm{st}}\; L_T^{\mathcal{P}_A}.
+\Delta Y^j_{T_k}(\mathcal P)
+=
+\delta^{A_k j}
+\frac{\mathrm{LGD}^{A_k}
+E^{A_k}_{\mathcal P}(T_k)}
+{P^{A_k}}.
 \]
 
-\textbf{Step 7: Convex ordering.}
-First-order stochastic dominance $\geq_{\mathrm{st}}$ implies convex order $\leq_{cx}$ (standard result in stochastic orders literature). Since ES is coherent risk measure monotone with respect to convex order:
+Since exposures are ordered pointwise and LGDs identical,
 \[
-\mathrm{ES}_\alpha(L_T^{\mathcal{P}_A}) \;\leq\; \mathrm{ES}_\alpha(L_T^{\mathcal{P}_B}) \quad \forall\, \alpha \in (0,1).
+\Delta Y^j_{T_k}(\mathcal P_B)
+\ge
+\Delta Y^j_{T_k}(\mathcal P_A).
 \]
+
+The drift and diffusion coefficients are identical across portfolios. By the one–dimensional SDE comparison theorem
+(see Ikeda and Watanabe~\cite{ikeda1989}; Karatzas and Shreve~\cite{karatzas1991}),
+ordered initial conditions imply
+\[
+Y^j_t(\mathcal P_B)
+\ge
+Y^j_t(\mathcal P_A)
+\quad \forall t \in [0,T],\ \text{a.s.}
+\]
+
+Thus obligor intensities satisfy
+\[
+\lambda^A_t(\mathcal P_B)
+\ge
+\lambda^A_t(\mathcal P_A)
+\quad \forall A,\ \forall t.
+\]
+
+\medskip
+
+\textbf{2. Default time ordering.}
+
+Default times are defined via the standard Cox time–change construction arguments
+(Brémaud~\cite{bremaud1981}; Lando~\cite{lando2004}):
+\[
+\tau^A_{\mathcal P}
+=
+\inf\Big\{
+t :
+\int_0^t \lambda^A_s(\mathcal P)\,ds
+\ge \xi^A
+\Big\},
+\]
+where $\xi^A$ are independent unit exponentials.
+
+Since integrated intensities are ordered pathwise, we obtain
+\[
+\tau^A_{\mathcal P_B}
+\le
+\tau^A_{\mathcal P_A}
+\quad \text{a.s.}
+\]
+
+\medskip
+
+\textbf{3. Loss comparison.}
+
+Total loss at time $T$ is
+\[
+L_T^{\mathcal P}
+=
+\sum_A
+\mathrm{LGD}^A
+E^A_{\mathcal P}(\tau^A_{\mathcal P})
+\mathbf 1_{\{\tau^A_{\mathcal P}\le T\}}.
+\]
+
+Using exposure ordering and default-time ordering term-by-term yields
+\[
+L_T^{\mathcal P_A}
+\le
+L_T^{\mathcal P_B}
+\quad \text{a.s.}
+\]
+
+\medskip
+
+\textbf{4. Risk measure ordering.}
+
+Almost sure ordering implies first-order stochastic dominance. Moreover, for every increasing convex function $\varphi$ with finite expectations,
+\[
+\mathbb E\!\left[\varphi\!\left(L_T^{\mathcal P_A}\right)\right]
+\le
+\mathbb E\!\left[\varphi\!\left(L_T^{\mathcal P_B}\right)\right],
+\]
+so $L_T^{\mathcal P_A} \le_{icx} L_T^{\mathcal P_B}$ (increasing convex order). Expected Shortfall is coherent and monotone (Artzner et al.~\cite{artzner1999}), hence the stated ES inequality follows.
 \end{proof}
-
-\para{Application to schedule hierarchy.}
-The EAD pointwise ordering
-\[
-E_{\mathrm{Linear}}(t) \;\leq\; E_{\mathrm{French}}(t) \;\leq\; E_{\mathrm{Bullet}}(t) \;\leq\; E_{\mathrm{Neg.\,Am.}}(t) \qquad \forall\, t \in (0, T)
-\]
-directly satisfies proposition hypothesis, yielding ES ordering:
-\[
-\mathrm{ES}_\alpha(L_T^{\mathrm{Linear}}) \;\leq\; \mathrm{ES}_\alpha(L_T^{\mathrm{French}}) \;\leq\; \mathrm{ES}_\alpha(L_T^{\mathrm{Bullet}}) \;\leq\; \mathrm{ES}_\alpha(L_T^{\mathrm{Neg.\,Am.}}).
-\]
-
-\para{Caveats.}
-(i) Coupling argument relies on pathwise intensity ordering holding between successive defaults, guaranteed under CIR by comparison theorem but may require separate verification for more general diffusions. (ii) Inequality in EAD hierarchy strict for all $t \in (0, T)$ but collapses at $t = T$ for Bullet ($E_{\mathrm{B}}(T) = 0$); ordering is property of horizon interior, not endpoint.
 
 \section{Parameterisation Details}
 \label{app:params}
 
 \subsection{Sector Intensity Dynamics}
 
-Each sector $j \in \{1, 2, 3\}$ governed by CIR process with loss-driven jump:
+Each sector $j \in \{1, 2, 3\}$ is governed by a CIR process with loss-driven jump:
 \[
-\mathrm{d}Y^j_t \;=\; \kappa^j(\theta^j - Y^j_t)\,\mathrm{d}t \;+\; \sigma^j\sqrt{Y^j_t}\,\mathrm{d}W^j_t \;+\; \sum_{n : A_n \in \text{sector } j} \delta^{A_n j}\,\frac{\ell^{A_n}}{P^{A_n}}\,\mathrm{d}N_t,
+\mathrm{d}Y^j_t \;=\; \kappa^j(\theta^j - Y^j_t)\,\mathrm{d}t \;+\; \sigma^j\sqrt{Y^j_t}\,\mathrm{d}W^j_t \;+\; \sum_{n\ge 1} \delta^{A_n j}\,\frac{\ell^{A_n}}{P^{A_n}}\,\delta_{T_n}(\mathrm{d}t),
 \]
 where $\kappa^j = 0.5$ (mean reversion speed), $\theta^j = 0.05$ (long-run mean), $\sigma^j = 0.15$ (volatility), $Y^j_0 = 0.03$ (initial level).
 
