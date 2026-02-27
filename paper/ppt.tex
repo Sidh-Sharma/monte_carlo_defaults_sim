@@ -732,45 +732,39 @@ Linear & \alert{0.529} & 186.63 & 247.82 & \alert{1.328} \\
 
 \section{Theoretical Foundation}
 
-\begin{frame}{Risk Ordering: Coupling Argument}
+\begin{frame}{Loss Ordering Under Exposure Dominance}
 
-\textbf{Setup:} Two portfolios with identical randomness but different EAD schedules:
+\small
+
+\textbf{Setup (common coupling):} Same Brownian motions, idiosyncratic factors, and LGD draws; only exposure schedules differ, with
 \begin{equation*}
-E^A_{\mathcal{P}_A}(t) \;\leq\; E^A_{\mathcal{P}_B}(t) \quad \forall\, A,\, t
+E^A_{\mathcal P_A}(t) \le E^A_{\mathcal P_B}(t)\quad \forall A,\; t\in[0,T].
 \end{equation*}
 
-\vspace{1em}
-\begin{columns}[T]
-\begin{column}{0.48\textwidth}
-\textbf{Pathwise Dynamics:}
-\begin{enumerate}
-\item First default $T_1$ identical
-\item Contagion jump: $\Delta \mathcal{Y}_{T_1}^B \geq \Delta \mathcal{Y}_{T_1}^A$
-\item Intensity ordering propagates
-\item More defaults in $\mathcal{P}_B$
-\item Each with larger loss
-\end{enumerate}
-\end{column}
+\textbf{Loss ordering under exposure dominance:}
+\begin{itemize}
+\item Larger EAD implies larger contagion jumps: $\Delta Y^j(\mathcal P_B)\ge \Delta Y^j(\mathcal P_A)$.
+\item SDE comparison gives ordered sector factors and obligor intensities.
+\item Cox time-change gives ordered default times: $\tau^A_{\mathcal P_B}\le \tau^A_{\mathcal P_A}$.
+\item Hence terminal losses are pathwise ordered:
+\end{itemize}
 
-\begin{column}{0.48\textwidth}
-\textbf{Result:}
-\begin{align*}
-L_T^{\mathcal{P}_B} &\geq_{\text{st}} L_T^{\mathcal{P}_A} \\
-&\Downarrow \\
-L_T^{\mathcal{P}_A} &\leq_{\text{cx}} L_T^{\mathcal{P}_B} \\
-&\Downarrow \\
-\text{ES}_\alpha(L_T^A) &\leq \text{ES}_\alpha(L_T^B)
-\end{align*}
+\begin{equation*}
+L_T^{\mathcal P_A} \le L_T^{\mathcal P_B}\quad \text{a.s.}
+\end{equation*}
 
-\vspace{0.5em}
-Holds for all $\alpha \in (0,1)$
-\end{column}
-\end{columns}
+Therefore,
+\begin{equation*}
+L_T^{\mathcal P_A} \le_{\mathrm{st}} L_T^{\mathcal P_B}.
+\end{equation*}
 
-\vspace{1em}
-\textbf{Application:} $E_{\text{Linear}} \leq E_{\text{French}} \leq E_{\text{Bullet}} \leq E_{\text{Neg.Am.}}$
+By monotonicity of Expected Shortfall,
+\begin{equation*}
+\mathrm{ES}_\alpha\!\left(L_T^{\mathcal P_A}\right) \le \mathrm{ES}_\alpha\!\left(L_T^{\mathcal P_B}\right),\quad \forall\alpha\in(0,1).
+\end{equation*}
 
-$\Rightarrow$ Heavy tails are \alert{intrinsic mathematical property}, not simulation artifact
+\textbf{Application:} $E_{\text{Linear}}\le E_{\text{French}}\le E_{\text{Bullet}}\le E_{\text{Neg.Am.}}$ \\
+$\Rightarrow$ same ordering for $L_T$ and ES.
 
 \end{frame}
 
